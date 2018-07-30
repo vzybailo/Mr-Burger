@@ -1,0 +1,26 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position:relative; // все элементы будут позиционироваться относительно данного блока-родителя
+}
+
+.maincontent {
+    height: 100%;
+    min-height: 650px; // минимальная высота секции
+}
+  
+.container {
+    width: 940px; // минимальная ширина страницы вне зависимости от окна браузера
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    background-color: rgba(0,0,0,0.31);
+    min-width: 940px;
+    min-height: 650px;
+    height: 100vh; // выcoта на все окно в браузере
+  }
+  

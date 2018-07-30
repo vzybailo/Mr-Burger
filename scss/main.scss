@@ -1,0 +1,13 @@
+/* config */
+@import 'config/mixin.scss';
+@import 'config/variables.scss';
+
+/* layout */
+@import 'layout/fonts.scss';
+@import 'layout/layout.scss';
+@import 'layout/adjustment.scss';
+
+/* section */
+@import 'section/welcome.scss';
+@import 'section/best.scss';
+@import 'section/reviews.scss';

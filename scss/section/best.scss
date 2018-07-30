@@ -1,0 +1,42 @@
+.best {
+    background-image: url(/img/bg/best-bg.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: center;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: center;
+}
+
+.section__title {
+    @include title-font;
+    color: $dark;
+    margin-bottom: 75px;
+}
+
+.best__list {
+    display: flex;
+    margin-left: 25px;
+}
+
+.best__title {
+    font-family: Lifehack-medium;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    text-align: center;
+    color: $dark;
+ }
+
+.best__text p {
+    opacity: 0.8;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    text-align: center;
+    color: rgba(47, 50, 52, 0.8);
+}

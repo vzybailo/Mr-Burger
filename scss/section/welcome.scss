@@ -1,0 +1,106 @@
+.heading {
+    background-image: url("/img/bg/hero_bg.png");
+    background-repeat: no-repeat;
+    background-position: 50%; // размещение по центру блока
+    background-size: cover;
+    font-family: Ubuntu;
+}
+
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.header__logo {
+    width: 88px;
+    height: 70px;
+}
+
+.header__right {
+    display: flex;
+    margin-top: 22px;
+}
+
+.nav__item {
+    display: inline-block;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        background-color: #fff;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+    &:first-child:before  {
+        display: none;
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;  
+    color: #fff;
+    font-size: 13px;
+
+    &:hover {
+        text-decoration: underline; 
+    }
+}
+
+.header__button-link {
+    @include btn; // миксин кнопки 
+    padding: 10px 15px;
+    margin-left: 15px;
+
+    &:hover {
+        background-color: #e44e28a6;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main__pic {
+    padding-left: 25px;
+}
+
+.main__text {
+    padding-top: 42px;
+    padding-left: 15px;
+}
+
+.main__about {
+    font-family: 'Lifehack-Medium';
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+ }
+
+.main__title {
+    @include title-font;
+    color: $yellow;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}

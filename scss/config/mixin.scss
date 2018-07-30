@@ -1,0 +1,18 @@
+@mixin btn {
+    border-radius: 5px;
+    background-color: $orange;
+    text-align: center;  
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;      
+}
+
+@mixin title-font {
+    font-family: Gagalin;
+    font-size: 72px;
+    font-weight: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+}
