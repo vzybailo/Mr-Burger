@@ -1,0 +1,169 @@
+.order {
+    background-image: url('/img/bg/otder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.yellow {
+    color: $yellow;
+    text-align: center;
+}
+
+.block__form {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      width: 150vw;
+   }
+  }
+
+.form__left, .form__right {
+  width: 50%;
+}
+
+.form__right {
+  padding: 0.625rem 0 0 1rem;
+
+  @include tablets {
+    padding: 0.625rem 0 0 0.625rem;
+ }
+}
+
+.form__row  {
+  display: flex;
+  padding: rem (5px);
+}
+
+.form__input  {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.875rem;
+  background: #fff;
+  border-radius: 0.4375rem;
+  border: 0;
+}
+
+.form__input-name {
+  margin-bottom: 0.3125rem;
+}
+
+.form__block {
+  flex: 1;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+}
+
+.comment {
+  height: 8.4375rem;
+  padding-bottom: 6.875rem; // поле примечание
+}
+
+.block__pay {
+  display: flex;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 1.25rem 1.25rem 1.25rem 0;
+  padding-right: 1.25rem;
+
+  @include phones {
+   margin: rem(20px) 0 rem(20px) 0;
+  }
+
+}
+
+.radio__input {
+  display: none; // скрываем стандартный чекбокс
+}
+
+.radio__fake {
+  width: 0.9375rem; // белый круглый чекбокс задаем
+  height: 0.9375rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 0.0625rem solid #cbcbcb;
+  position: relative;
+  background:white;
+  margin-right: 0.5625rem;
+}
+
+.radio__fake:after {
+  content: "";
+  display: none;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  background: $orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+}
+
+.radio__input:checked + .radio__fake:after {
+  display: block;  // появление красной точки в чекбоксе
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+
+.check {
+  display: none;
+}
+
+.block__calls {
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.fake__checkbox {
+  display: block;
+  width:0.9375rem;
+  height: 0.9375rem;
+  background: #fff;
+  position: relative;
+  margin-right: 0.5rem;
+
+  &:after {
+    content: "\2714 ";
+    display: none;
+    color: $orange;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+  }
+}
+
+.check:checked + .fake__checkbox:after {
+  display: block;
+}
+
+.clear {
+  margin-left: 0.625rem;
+  background-color: transparent;
+}
+
+.order__btns {
+  display: flex;
+  margin: 1.25rem 0 0 -0.9375rem;
+
+  @include phones {
+    justify-content: center;
+    margin: 0;
+  }
+}

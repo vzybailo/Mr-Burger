@@ -1,5 +1,5 @@
 .best {
-    background-image: url(/img/bg/best-bg.png) ;
+    background-image: url(../img/bg/best-bg.png) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -14,29 +14,68 @@
 .section__title {
     @include title-font;
     color: $dark;
-    margin-bottom: 75px;
+    margin-bottom: 4.6875rem;
+
+    @include phones {
+        font-size: rem(50px);
+        margin-bottom: rem(20px);
+     }
+
 }
 
 .best__list {
     display: flex;
-    margin-left: 25px;
+    margin-left: 1.5625rem;
+
+    @include phones {
+        flex-direction: column;
+     }
 }
+
+.best__item {
+    @include phones {
+        display: flex;
+        flex-direction: row;
+     } 
+}
+
+.best__pic {
+    @include phones {
+        padding-right: 20px;
+     } 
+}
+
+.best__icon {
+    @include phones {
+        width: 75px;
+     } 
+}
+
 
 .best__title {
     font-family: Lifehack-medium;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.17;
     text-align: center;
     color: $dark;
+
+    @include phones {
+        text-align: left;
+     }
  }
 
 .best__text p {
     opacity: 0.8;
     font-family: Ubuntu;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.71;
     text-align: center;
     color: rgba(47, 50, 52, 0.8);
+
+    @include phones {
+        text-align: left;
+   
+     }
 }

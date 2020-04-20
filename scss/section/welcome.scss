@@ -1,5 +1,5 @@
 .heading {
-    background-image: url("/img/bg/hero_bg.png");
+    background-image: url("../img/bg/hero_bg.png");
     background-repeat: no-repeat;
     background-position: 50%; // размещение по центру блока
     background-size: cover;
@@ -12,22 +12,27 @@
     justify-content: space-between;
 }
 
-
 .header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
-.header__logo {
-    width: 88px;
-    height: 70px;
+.header__logo-pic {
+    width: 5.5rem;
+    height: 4.375rem;
+}
+
+nav {
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__right {
     display: flex;
-    margin-top: 22px;
+    margin-top: 1.375rem;
 }
 
 .nav__item {
@@ -37,11 +42,11 @@
         content: "";
         display: inline-block;
         background-color: #fff;
-        width: 5px;
-        height: 5px;
+        width: 0.3125rem;
+        height: 0.3125rem;
         border-radius: 50%;
         vertical-align: middle;
-        margin: 0 10px;
+        margin: 0 0.625rem;
     }
 
     &:first-child:before  {
@@ -53,17 +58,25 @@
     text-decoration: none;
     text-transform: uppercase;  
     color: #fff;
-    font-size: 13px;
+    font-size: 0.8125rem;
 
     &:hover {
         text-decoration: underline; 
     }
 }
 
+.header__button {
+
+    @include tablets {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .header__button-link {
     @include btn; // миксин кнопки 
-    padding: 10px 15px;
-    margin-left: 15px;
+    padding: 0.625rem 0.9375rem;
+    margin-left: 0.9375rem;
 
     &:hover {
         background-color: #e44e28a6;
@@ -73,34 +86,73 @@
 .main {
     display: flex;
     align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .main__pic {
-    padding-left: 25px;
+    padding-left: 1.5625rem;
+
+    @include phones {
+        padding: 0;
+        text-align: center;
+     }
+
+}
+
+.main-img {
+    @include tablets {
+       width: rem(350px);
+    }
+
+    @include phones {
+        width: 85%;
+     }
 }
 
 .main__text {
-    padding-top: 42px;
-    padding-left: 15px;
+    padding-top: 2.625rem;
+    padding-left: 0.9375rem;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
 }
 
 .main__about {
     font-family: 'Lifehack-Medium';
-    font-size: 65px;
+    font-size: 4.375rem;
     font-weight: 500;
     line-height: 1;
     text-align: left;
     color: #ffffff;
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        font-size: rem(54px);
+    }
  }
 
 .main__title {
     @include title-font;
     color: $yellow;
+
+    @include phones {
+        font-size: rem(62px);
+    }
 }
 
-.arrow {
+.header__arrow {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: 30px;
+    margin: rem(20px) 0 0 0;
 }

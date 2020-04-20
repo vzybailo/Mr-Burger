@@ -1,13 +1,35 @@
+$orange: #e45028;
+$yellow: #f8b43a;
+$green: #8ac03e;
+$dark: #2f3234;
+
+// resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
 /* config */
 @import 'config/mixin.scss';
-@import 'config/variables.scss';
 
 /* layout */
 @import 'layout/fonts.scss';
 @import 'layout/layout.scss';
 @import 'layout/adjustment.scss';
+@import 'layout/media.scss';
+
+/* blocks */
+@import 'blocks/fixedmenu.scss';
+@import 'blocks/hamburger_menu.scss';
+@import 'blocks/mobile-menu.scss';
 
 /* section */
 @import 'section/welcome.scss';
 @import 'section/best.scss';
 @import 'section/reviews.scss';
+@import 'section/team.scss';
+@import 'section/menu.scss';
+@import 'section/order.scss';
+@import 'section/contacts.scss';
+@import 'section/burgers.scss';

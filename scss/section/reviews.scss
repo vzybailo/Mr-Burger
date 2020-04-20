@@ -1,3 +1,7 @@
+.reviews {
+  position: relative;
+}
+
 .reviews__list {
     height: 100%;
     display: flex;
@@ -5,13 +9,19 @@
   }
 
   .reviews__item {
-    flex-basis: 25%;
+    width: 25%;
+    height: 50%;
+
+    @include tablets {
+      width: 50%;
+      height: 25%;
+   }
   }
 
-    
   .review {
     height: 100%;
     position: relative;
+    
     &:hover .review__hover {
       transform: translate(-50%, -50%)  scale(1);
       opacity: 1;
@@ -41,30 +51,69 @@
     opacity: 0;
     transition: .5s;
     background-color: rgba(0, 1, 5, .7);
+
+    @include tablets {
+     text-align: center;
+     padding: 4%;
+     font-size: 0.875rem;
+   }
   }
   
   .review__title {
     font-family: 'Gagalin';
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem;
     color: #fff;
+
+    @include tablets {
+      margin-bottom: 0.875rem;
+    }
+
+    @include phones {
+      font-size: rem(23px);
+      margin-bottom: rem(30px);
+      padding: rem(10px);
+    }
   }  
 
   .review__shorttext {
     color: #ffffff;
     font-family: 'Ubuntu';
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 20px;
+    line-height: 1.875rem;
+    margin-bottom: 1.25rem;
+
+    @include tablets {
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    @include phones {
+      display: none;
+    }
   }
+
+  .review__button-wrap {
+    @include phones {
+      display: none;
+    }
+  }
+
+ .review__button-wrap-mobile {
+    display: none;
+
+    @include phones {
+      display: block;
+    }
+ }
   
   .review__view {
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background-color: $dark;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
@@ -73,5 +122,43 @@
     &:hover {
       background-color: darken($dark, 5%);
     }
+  }
+  
+  .popup {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    color: #fff;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #2f3234;
+  }
+
+  .popup__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Gagalin';
+    font-size: 2rem;
+    width: 22rem;
+    text-align: center;
+  }
+
+.popup__text {
+  text-align: center;
+}
+
+  .popup__cross{
+    margin-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
   }
   

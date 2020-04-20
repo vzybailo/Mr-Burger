@@ -1,3 +1,18 @@
+html {
+  @include tablets {
+    font-size: 0.9375rem;
+  }
+
+  @include phones {
+    font-size: 0.8125rem;
+  }
+}
+
+
+body, html {
+  height: 100%;
+}
+  
   body {
       margin: 0;
       padding: 0;
@@ -9,9 +24,6 @@
       box-sizing: border-box; /*элемент сохраняет заданные размеры, отступы и рамки отрисовываются внутрь элемента */
     }
     
-    body, html {
-      height: 100%;
-    }
     
     ul {
       margin: 0;

@@ -1,0 +1,71 @@
+.mobile {
+    background: #2f3234;
+    height: 100vh;  
+    position: fixed; //чтобы меню всегда было вверху
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10; // отображалось поверх окон
+}
+
+.mobile__logo {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile__logo-pic {
+    width: 25%;  
+}
+
+.mobile__logo-link {
+    margin-right: 1rem;
+}
+
+.mobile__menu {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+        content: "";
+        display: flex;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &:last-child:after {
+        display: none;
+    }
+
+}
+
+.mobile__item-link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+
+  
+
+}

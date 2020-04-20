@@ -1,26 +1,37 @@
 .wrapper {
     width: 100%;
-    height: 100%;
     position:relative; // все элементы будут позиционироваться относительно данного блока-родителя
+    overflow: hidden; 
+    height: 100%;
 }
 
 .maincontent {
     height: 100%;
     min-height: 650px; // минимальная высота секции
+    transition: transform 0.8s; //задает плавность переключения между слайдами
+    will-change: transform; 
 }
   
 .container {
-    width: 940px; // минимальная ширина страницы вне зависимости от окна браузера
+    width: 95%;
+    max-width: 940px; // максимальная ширина страницы вне зависимости от окна браузера
     height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .section {
-    background-color: rgba(0,0,0,0.31);
-    min-width: 940px;
-    min-height: 650px;
-    height: 100vh; // выcoта на все окно в браузере
+    height: 100%;
+    min-height: rem(650px);
+    position: relative;
+    overflow: hidden;
   }
   
+  footer {
+    position: relative;
+    width: 100%;
+  }

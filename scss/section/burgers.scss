@@ -1,0 +1,299 @@
+.burgers {
+    background-image: linear-gradient(to bottom, #f9b43b 20%, #eb8d38, #f9b43b);
+}
+
+.burgers__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    min-width: 1100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.arrows {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+  }
+
+.arrow__img-left {
+    transform: rotate(90deg);
+}
+
+.arrow__img-right {
+    transform: rotate(-90deg);
+}
+
+
+.food {
+    width: 56.25rem;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 84vw;
+    position: relative;
+    flex-grow: 1;
+    z-index: 3;
+    overflow: hidden;
+}
+
+
+.slider {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    max-width: 56.25rem;
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.slider__item {
+    white-space: normal;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 3rem;
+}
+
+
+
+.food__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+      }
+
+      @include phones {
+        width: 80%;
+
+      }
+}
+
+
+.food__left {
+    margin-right: 3rem;
+    position: relative;
+
+    @include tablets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+      }
+}
+
+.composition {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.left__img {
+    display: block;
+    padding: 3rem;
+}
+
+.left__img-pic {
+    width: 450px;
+}
+
+
+.left__kkal {
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    opacity: .5;
+}
+
+.burger-title {
+        font-size:4.375rem;
+        margin: 0;
+        padding: 0;
+        font-family: "Gagalin";
+        color: rgb( 255, 255, 255 );
+        text-align: left;
+        line-height: 1;
+
+        @include tablets {
+            text-align: center;
+            margin-bottom: 1rem;
+         }
+      }
+
+.food__description {
+        color: rgb( 255, 255, 255 );
+        line-height: 1.715;
+        text-align: left;
+
+        @include tablets {
+            text-align: center;
+          }
+}
+
+.food__price {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        justify-content: center;
+      }
+}
+
+.food__price-text {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Gagalin';
+    font-size: 1.875rem;
+    color: #e35028;
+    padding: 0 20px 20px 0;
+}
+
+.food__price-text span {
+    font-size: 4.5rem;
+    margin-right: 1rem;
+}
+
+.composition__btn {
+    border: none;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+ 
+
+    &:hover .sklad__list {
+        display: block;
+    }
+}
+
+.composition__main {
+    background: #f08c33;
+    width: 90px;
+    height: 90px;
+    border-radius: 0.4375rem;
+    padding: 0.625rem 0.9375rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+.composition__svg {
+    width: 80%;
+    fill: #fff;
+}
+
+.composition__svg-text {
+    font-family: "Gagalin";
+    color: #fff;
+    text-transform: lowercase;
+
+}
+
+.sklad__list {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.9375rem 1.25rem;
+    border-radius: 0.4375rem;
+    position: absolute;
+    left: 100%;
+    font-family: 'Ubuntu';
+    font-size: 0.875rem;
+    color: #2f3234;
+    display: none;
+}
+
+.sklad__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sklad__svg  {
+    display: block;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    fill: #e35028;
+}
+
+.yellow {
+    fill: $yellow;
+}
+
+.green {
+    fill: $green;
+}
+      
+.sklad__svg-name {
+    margin-left: 1.875rem;
+    width: 6.25rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sklad__svg-text {
+    text-align: right;
+    width: 3.25rem;
+}
+
+.left__img-pic {
+    @include tablets {
+        width: 25rem;
+        padding-top: 3rem;
+      }
+    
+}
+
+.left__kkal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6rem;
+}
+
+.kkal {
+    fill: #fff;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: block;
+}
+
+.kkal__text {
+    position: absolute;
+    color: #fff;
+    font-family: "Gagalin";
+  
+}

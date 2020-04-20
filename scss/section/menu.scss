@@ -1,0 +1,109 @@
+.menu {
+    background-image: url('/img/bg/burgers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.white {
+    color: #fff;
+    margin-top: 6.25rem;
+    margin-left: 9.375rem;
+}
+
+.menu__content {
+    position: relative;
+}
+
+.menu__acco {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.menu__acco-item {
+    display: flex; 
+    flex-direction: row;
+    color: #fff;
+    justify-content: flex-start;
+    flex: auto;
+}
+
+
+
+.menu__acco-trigger {
+    font-family: 'Gagalin';
+    font-size: 2.5rem;
+    background-image: url(/img/bg/sprite-accordeon.png);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: cover;
+    height: 100%;
+    width: 5rem;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+
+.link-meat {
+    background-position: 0 center; // позиционирование картинки
+}
+
+.link-vegetarian {
+    background-position: center center;
+}
+
+.link-dietary {
+    background-position: right center;
+}
+
+.menu__acco-trigger-text {
+    white-space: nowrap;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: 0 0;
+}
+
+.menu__acco-content {
+    
+    font-family: "Ubuntu";
+    font-size: 0.875rem;
+    line-height: 1.625rem; // отступы между строками
+    width: 0; // скрываем содержимое каждого пункта
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    background: rgba(50, 53, 54, 0.9);
+    color: #fff;
+    transition: all .6s ease;
+}
+
+.text-active {
+    width: 50vw;
+
+    @include phones {
+        width: 100vw;
+      }
+}
+
+.menu__acco-content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+
+
+

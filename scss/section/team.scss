@@ -1,0 +1,153 @@
+.team {
+    background: url("/img/bg/team.jpg")  no-repeat;
+    background-size: cover;
+    justify-content: flex-start; // выравнивание по горизонтали слева направо
+    position: relative;
+}
+
+.team__section {
+    position: absolute;
+    background-color: rgba(#2f3234, .93);
+    top: 0%;
+    bottom: 0%;
+    right: 0%; // прижимаем к правому краю, поэтому не задаем left
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 4.375rem;
+
+    @include tablets {
+      width: 100%;
+      padding: 0;
+   }
+}
+
+.team__content {
+    width: 70%;
+
+    @include tablets {
+      text-align: center;
+   }
+    
+  }
+
+.command__title {
+    @include title-font;
+    color: $yellow;
+    margin-bottom: 6rem;
+
+    @include tablets {
+      text-align: center;
+      margin-bottom: rem(10px);
+   }
+
+   @include phones {
+    font-size: rem(50px);
+    margin-bottom: rem(20px);
+    }   
+  }
+
+
+  .team__acco-item {
+    margin-bottom: 2.1875rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include phones {
+      margin-bottom: rem(10px);
+      } 
+
+    &.active {
+      .team__acco-content {
+        height: auto;
+      }
+
+      .team__acco-trigger {
+        color: #f9b43b;
+
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+}
+
+.team__acco-trigger {
+    font-size: 0.875rem;
+    color: white;
+    margin-bottom: 0.625rem;
+    font-family: Gagalin;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.625rem;
+
+    @include tablets {
+      font-size: 1.5625rem;
+   }
+  
+    &::before {     // треугольник
+      content: "";
+      width: 0;
+      height: 0;
+      border: 0.5625rem solid transparent;
+      border-top-color: #f9b43b;
+      border-bottom: none;
+      margin-right: 0.625rem;
+    }
+  }
+
+  .team__acco-content {
+    display: flex;
+    overflow: hidden;
+    height: 0;
+    margin-top: 0.9375rem;
+    margin-left: 0.9375rem;
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+   }
+  }
+  
+
+
+  .team__acco-avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1.25rem;
+
+    @include tablets {
+      margin: 0;
+      margin-left: 1rem;
+    }
+  }
+  
+  .team__acco-avatar-pic { // выравниваем картинку посередине блока
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .team__acco-description {
+    color: white;
+    margin-left: 1.25rem;
+
+  
+  }
+
+  .team__acco-description-occ {
+    font-family: "Ubuntu-Bold";
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+  }
+  
