@@ -996,7 +996,7 @@ footer {
 }
 
 .menu {
-  background-image: url("/img/bg/burgers.jpg");
+  background-image: url("../img/bg/burgers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1136,7 +1136,7 @@ footer {
 }
 
 .order {
-  background-image: url("/img/bg/otder.jpg");
+  background-image: url("../img/bg/otder.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1343,7 +1343,7 @@ footer {
 }
 
 .footer {
-  background: url(/img/content/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg) center no-repeat;
+  background: url(../img/content/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg) center no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
@@ -1372,6 +1372,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 2rem;
   }
 }
 

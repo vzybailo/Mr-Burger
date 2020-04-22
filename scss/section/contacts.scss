@@ -1,5 +1,5 @@
 .footer {
-    background: url(/img/content/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg) center no-repeat ;
+    background: url(../img/content/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg) center no-repeat ;
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -17,6 +17,7 @@
 
     @include phones {
         flex-direction: column;
+        margin-bottom: 2rem;
       }
 }
 
