@@ -89,6 +89,7 @@ nav {
 
     @include tablets {
         flex-direction: column;
+        margin-bottom: -6rem;
     }
 }
 
@@ -150,9 +151,6 @@ nav {
     }
 }
 
-.header__arrow {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: rem(20px) 0 0 0;
+.header-arrow {
+    margin-bottom: 3rem;
 }

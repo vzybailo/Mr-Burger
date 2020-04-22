@@ -64,6 +64,11 @@
     align-items: center;
     z-index: 10;
     padding: 3rem;
+
+    @include phones {
+        padding: 0;
+
+      }
 }
 
 
@@ -75,11 +80,6 @@
 
     @include tablets {
         flex-direction: column;
-      }
-
-      @include phones {
-        width: 80%;
-
       }
 }
 
