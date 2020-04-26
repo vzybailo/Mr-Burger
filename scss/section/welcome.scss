@@ -89,7 +89,11 @@ nav {
 
     @include tablets {
         flex-direction: column;
-        margin-bottom: -6rem;
+        margin-top: -6rem;
+    }
+
+    @include phones {
+        margin-top: -6rem;
     }
 }
 
@@ -105,7 +109,7 @@ nav {
 
 .main-img {
     @include tablets {
-       width: rem(350px);
+       width: 32rem;
     }
 
     @include phones {

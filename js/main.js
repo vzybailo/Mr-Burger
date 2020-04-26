@@ -204,52 +204,112 @@
 
 
 
-    $(function() {
-        var moveSlide = function(container,slideNum) {
+    // $(function() {
+    //     var moveSlide = function(container,slideNum) {
 
-        var
-        items=container.find(".slider__item"),
-        activeSlide=items.filter(".slider-active"),
-        reqItem=items.eq(slideNum),
-        reqIndex=reqItem.index(),
-        list=container.find(".slider"),
-        duration=500;
+    //     var
+    //     items=container.find(".slider__item"),
+    //     activeSlide=items.filter(".slider-active"),
+    //     reqItem=items.eq(slideNum),
+    //     reqIndex=reqItem.index(),
+    //     list=container.find(".slider"),
+    //     duration=500;
 
-        if(reqItem.length) {
-            list.animate({
-            "left": -reqIndex * 100 + "%"
-        },duration , function() {
-            activeSlide.removeClass("slider-active");
-            reqItem.addClass("slider-active");
-        });
-        }
-    }
+    //     if(reqItem.length) {
+    //         list.animate({
+    //         "left": -reqIndex * 100 + "%"
+    //     },duration , function() {
+    //         activeSlide.removeClass("slider-active");
+    //         reqItem.addClass("slider-active");
+    //     });
+    //     }
+    // }
 
-    $(".arrow__link").on("click" , function(e){
-        e.preventDefault();
+    // $(".arrow__link").on("click" , function(e){
+    //     e.preventDefault();
 
-        var $this=$(this),
-        container = $(".food"),
-        items=container.find(".slider__item"),
-        activeItem= items.filter(".slider-active"),
-        existedItem,edgeItem,reqItem;
+    //     var $this=$(this),
+    //     container = $(".food"),
+    //     items=container.find(".slider__item"),
+    //     activeItem= items.filter(".slider-active"),
+    //     existedItem,edgeItem,reqItem;
 
-        if ($this.hasClass("arrow__link_right")){
-            existedItem=activeItem.next();
-            edgeItem=items.first();
-        }
-        if ($this.hasClass("arrow__link_left")){
-            existedItem=activeItem.prev();
-            edgeItem=items.last();
-        }
+    //     if ($this.hasClass("arrow__link_right")){
+    //         existedItem=activeItem.next();
+    //         edgeItem=items.first();
+    //     }
+    //     if ($this.hasClass("arrow__link_left")){
+    //         existedItem=activeItem.prev();
+    //         edgeItem=items.last();
+    //     }
         
-        reqItem= existedItem.length ? existedItem.index() : edgeItem.index();
+    //     reqItem= existedItem.length ? existedItem.index() : edgeItem.index();
        
-              moveSlide(container,reqItem );
+    //           moveSlide(container,reqItem );
         
-    });
-    });
+    // });
+    // });
 
 
 
+// let prevbtn = document.querySelectorAll('.slider .slider__item');
+// let nextbtn = document.querySelectorAll('.slider .slider__item');
+// let curprev = 0;
+
+// function sliderbtn() {
+//   for (let i = 0; i < prevbtn.length; i++) {
+//     prevbtn[i].classList.add('dn');
     
+//   }
+//   prevbtn[current].classList.remove('dn');
+
+//   if (curprev+1 == prevbtn.length) {
+//       curprev = 0;
+//   }
+//   else {
+//       curprev++;
+//   }
+
+//   for (let i = 0; i < nextbtn.length; i++) {
+//     nextbtn[i].classList.add('dn');
+    
+//   }
+//   nextbtn[current].classList.remove('dn');
+
+//   if (curprev+1 == nextbtn.length) {
+//       curprev = 0;
+//   }
+//   else {
+//       curprev++;
+//   }
+// }
+
+// document.querySelector('.arrow__link_right').onclick = sliderbtn;
+// document.querySelector('.arrow__link_left').onclick = sliderbtn;
+
+
+
+let sld = document.querySelectorAll('.slider .slider__item');
+let current = 0;
+
+function slider() {
+  for (let i = 0; i < sld.length; i++) {
+    sld[i].classList.add('dn');
+    
+  }
+  sld[current].classList.remove('dn');
+
+  if (current+1 == sld.length) {
+      current = 0;
+  }
+  else {
+      current++;
+  }
+
+  }
+
+  
+document.querySelector('.arrow__link_right').onclick = slider;
+document.querySelector('.arrow__link_left').onclick = slider;
+
+
