@@ -87,7 +87,6 @@
 
 
 .food__left {
-    margin-right: 3rem;
     position: relative;
 
     @include tablets {
@@ -114,7 +113,7 @@
 
 .left__img {
     display: block;
-    padding: 3rem;
+    padding: 3rem 0;
 }
 
 .left__img-pic {
@@ -140,13 +139,13 @@
     height: 80px;
     opacity: .5;
 
-    @include phones {
-      padding-left: 17rem;
-      }
-
-      @include tablets {
+    @include tablets {
         padding-left: 25rem;
         }
+
+    @include phones {
+      padding-left: 15rem;
+      }  
 }
 
 .burger-title {
@@ -161,6 +160,10 @@
         @include tablets {
             text-align: center;
             margin-bottom: 1rem;
+         }
+
+         @include tablets {
+            font-size: 3.5rem;
          }
       }
 
@@ -190,11 +193,19 @@
     font-size: 1.875rem;
     color: #e35028;
     padding: 0 20px 20px 0;
+
+    @include tablets {
+        padding: 1rem;
+      }
 }
 
 .food__price-text span {
     font-size: 4.5rem;
     margin-right: 1rem;
+
+    @include tablets {
+        font-size: 2.5rem;
+      }
 }
 
 .composition__btn {
@@ -229,6 +240,11 @@
     &:hover {
         background-color: red;
     }
+
+    @include phones {
+        height: 5rem;
+        width: 6rem;
+      }
 }
 
 .composition__svg {
@@ -253,6 +269,10 @@
     font-size: 0.875rem;
     color: #2f3234;
     display: none;
+
+    @include phones {
+        width: 13rem;
+      }
 }
 
 .sklad__item {

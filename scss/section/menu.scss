@@ -16,6 +16,14 @@
     color: #fff;
     margin-top: 6.25rem;
     margin-left: 9.375rem;
+
+    @include tablets {
+        margin-left: 0.5rem;
+    }
+
+    @include phones {
+        margin-left: 0.5rem;
+    }
 }
 
 .menu__content {
@@ -51,6 +59,14 @@
     overflow: hidden;
     text-decoration: none;
     position: relative;
+
+    @include tablets{
+        width: 4rem;
+    }
+
+    @include phones{
+        width: 3rem;
+    }
 }
 
 .link-meat {
@@ -73,6 +89,10 @@
     top: 50%;
     transform: rotate(-90deg) translate(-50%, -50%);
     transform-origin: 0 0;
+
+    @include phones{
+        font-size: 2rem;
+    }
 }
 
 .menu__acco-content {
@@ -93,7 +113,7 @@
     width: 50vw;
 
     @include phones {
-        width: 100vw;
+        width: 45vw;
       }
 }
 

@@ -3,37 +3,37 @@
 /* layout */
 @font-face {
   font-family: "Gagalin";
-  src: url("../../fonts/Gagalin-Regular.woff") format("woff");
+  src: url("../fonts/Gagalin-Regular.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Lifehack-Medium";
-  src: url("../../fonts/Lifehack-Medium.woff") format("woff");
+  src: url("../fonts/Lifehack-Medium.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../fonts/Ubuntu.woff") format("woff");
+  src: url("../fonts/Ubuntu.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu-Bold";
-  src: url("../../fonts/Ubuntu-Bold.woff") format("woff");
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu-Light";
-  src: url("../../fonts/Ubuntu-Light.woff") format("woff");
+  src: url("../fonts/Ubuntu-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu-Medium";
-  src: url("../../fonts/Ubuntu-Medium.woff") format("woff");
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -1018,6 +1018,16 @@ footer {
   margin-top: 6.25rem;
   margin-left: 9.375rem;
 }
+@media screen and (max-width: 768px) {
+  .white {
+    margin-left: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .white {
+    margin-left: 0.5rem;
+  }
+}
 
 .menu__content {
   position: relative;
@@ -1067,6 +1077,16 @@ footer {
   text-decoration: none;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .menu__acco-trigger {
+    width: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__acco-trigger {
+    width: 3rem;
+  }
+}
 
 .link-meat {
   background-position: 0 center;
@@ -1093,6 +1113,11 @@ footer {
       -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
+@media screen and (max-width: 480px) {
+  .menu__acco-trigger-text {
+    font-size: 2rem;
+  }
+}
 
 .menu__acco-content {
   font-family: "Ubuntu";
@@ -1115,7 +1140,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .text-active {
-    width: 100vw;
+    width: 45vw;
   }
 }
 
@@ -1561,7 +1586,6 @@ footer {
 }
 
 .food__left {
-  margin-right: 3rem;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1603,7 +1627,7 @@ footer {
 
 .left__img {
   display: block;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .left__img-pic {
@@ -1637,14 +1661,14 @@ footer {
   height: 80px;
   opacity: 0.5;
 }
-@media screen and (max-width: 480px) {
-  .left__kkal {
-    padding-left: 17rem;
-  }
-}
 @media screen and (max-width: 768px) {
   .left__kkal {
     padding-left: 25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .left__kkal {
+    padding-left: 15rem;
   }
 }
 
@@ -1661,6 +1685,11 @@ footer {
   .burger-title {
     text-align: center;
     margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .burger-title {
+    font-size: 3.5rem;
   }
 }
 
@@ -1703,10 +1732,20 @@ footer {
   color: #e35028;
   padding: 0 20px 20px 0;
 }
+@media screen and (max-width: 768px) {
+  .food__price-text {
+    padding: 1rem;
+  }
+}
 
 .food__price-text span {
   font-size: 4.5rem;
   margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .food__price-text span {
+    font-size: 2.5rem;
+  }
 }
 
 .composition__btn {
@@ -1756,6 +1795,12 @@ footer {
 .composition__main:hover {
   background-color: red;
 }
+@media screen and (max-width: 480px) {
+  .composition__main {
+    height: 5rem;
+    width: 6rem;
+  }
+}
 
 .composition__svg {
   width: 80%;
@@ -1778,6 +1823,11 @@ footer {
   font-size: 0.875rem;
   color: #2f3234;
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .sklad__list {
+    width: 13rem;
+  }
 }
 
 .sklad__item {
